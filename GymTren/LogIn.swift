@@ -12,6 +12,11 @@ struct LogIn: View {
     @State var pass = ""
     @State var mess = ""
     @State var erro = false
+    @Binding var Swift22:Int
+    @ObservedObject var model = ViewModel()
+    @State var wi = UserDefaults.standard.string(forKey: "W")
+    @State var hi = UserDefaults.standard.string(forKey: "H")
+    @State var na = UserDefaults.standard.string(forKey: "na")
     var body: some View {
         ZStack{
             Color("for")
@@ -27,7 +32,8 @@ struct LogIn: View {
                             Image("pro").padding()
                             Divider()
                                 .frame(width:1, height: 50, alignment: .center)
-                            CustNam(place: Text("Ivanov"), nam: $nam)
+                            TextField("Ivanov", text: $nam).frame(width: 260, height: 50, alignment: .center).foregroundColor(Color("tt"))
+//                            CustNam(place: Text("Ivanov"), nam: $nam)
                         }.frame(width: 312, height: 50, alignment: .center)
                     }
                         ZStack{
@@ -36,20 +42,39 @@ struct LogIn: View {
                                 Image("z").padding()
                                 Divider()
                                     .frame(width:1, height: 50, alignment: .center)
-                                CustNamPass(place: Text("Ivanov"), pass: $pass)
+//                                CustNamPass(place: Text("●●●●●●"), pass: $pass)
+                                SecureField("●●●●●●", text: $pass).frame(width: 260, height: 50, alignment: .center).foregroundColor(Color("tt"))
                             }.frame(width: 312, height: 50, alignment: .center)
                         }
                     }
                     Button(action: {
-                        
+                        if nam != "" && pass != "" {
+                            model.SignIn(pass: pass, nam: nam)
+                            DispatchQueue.main.asyncAfter(deadline: .now()+2){
+                                if model.perehod == 2{
+                                    Swift22 = 3
+                                    UserDefaults.standard.set(nam, forKey: "na")
+                                } else if model.perehod == 3{
+                                    erro.toggle()
+                                    mess = "Error username or password"
+                                }
+                            }
+                        }else{
+                            erro.toggle()
+                            mess = "Enter all fields"
+                        }
                     }, label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 25.0).foregroundColor(.white).frame(width: 312, height: 50, alignment: .center)
                             Text("Sign In").font(.custom("ND Astroneer", size: 24)).foregroundColor(Color("tt"))
                         }
-                    }).padding(.top,40)
+                    }).padding(.top,40).alert(isPresented: $erro, content: {
+                        Alert(title: Text("Error"), message: Text("\(mess)"), dismissButton: .default(Text("Ok")))
+                    })
                     VStack(spacing:0){
-                    Button(action: {}, label: {
+                    Button(action: {
+                        Swift22 = 2
+                    }, label: {
                         Text("Sign Up").font(.custom("ND Astroneer", size: 24)).foregroundColor(Color.white)
                     })
                         Rectangle()
@@ -68,13 +93,15 @@ struct LogIn: View {
                 
                 Spacer()
             }.offset( y: 160)
-        }.edgesIgnoringSafeArea(.all)
+        }.edgesIgnoringSafeArea(.all).onTapGesture {
+            UIApplication.shared.windows.forEach{$0.endEditing(true)}
+        }
     }
 }
 
 struct LogIn_Previews: PreviewProvider {
     static var previews: some View {
-        LogIn()
+        LogIn( Swift22: .constant(6))
     }
 }
 

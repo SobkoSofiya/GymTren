@@ -22,10 +22,179 @@ class GymTrenUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testExampleSuccess() throws {
         // UI tests must launch the application that they test.
+        
+        
+        
+        
+        
+        
+        
+        
+        
         let app = XCUIApplication()
         app.launch()
+        let signUpButton = app.buttons["Sign Up"]
+        signUpButton.tap()
+        
+        let ivanovTextField = app.textFields["Ivanov"]
+      
+        ivanovTextField.tap()
+        ivanovTextField.typeText("G")
+        
+        let ivanovMailComTextField = app.textFields["Ivanov@mail.com"]
+        ivanovMailComTextField.tap()
+        ivanovMailComTextField.typeText("@g")
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        let secureTextField = element.children(matching: .secureTextField).matching(identifier: "●●●●●●").element(boundBy: 0)
+        secureTextField.tap()
+        secureTextField.typeText("g")
+        
+        let secureTextField2 = element.children(matching: .secureTextField).matching(identifier: "●●●●●●").element(boundBy: 1)
+        secureTextField2.tap()
+        secureTextField2.typeText("g")
+        signUpButton.tap()
+        ivanovTextField.tap()
+        ivanovTextField.typeText("G")
+        
+        let secureTextField3 = app.secureTextFields["●●●●●●"]
+        secureTextField3.tap()
+        secureTextField3.typeText("g")
+        app.buttons["Sign In"].tap()
+    
+        
+       
+    
+     
+     
+        
+//        let app = XCUIApplication()
+//        app.launch()
+//        let signUpButton = app.buttons["Sign Up"]
+//        signUpButton.tap()
+//        
+//        let ivanovStaticText = app.staticTexts["Ivanov"]
+//        ivanovStaticText.tap()
+//        ivanovStaticText.typeText("J")
+//        app.staticTexts["Ivanov@mail.com"].tap()
+//        app.staticTexts["Ivanov@mail.com"].typeText("@J")
+//        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+//        let textField = element.children(matching: .textField).element(boundBy: 0)
+//        textField.tap()
+//        textField.typeText("J")
+//        element.children(matching: .staticText).matching(identifier: "●●●●●●").element(boundBy: 0).tap()
+//        textField.tap()
+//        
+//        let staticText = app.staticTexts["●●●●●●"]
+//        staticText.tap()
+//        textField.tap()
+//        textField.typeText("J")
+//        signUpButton.tap()
+//        ivanovStaticText.tap()
+//        ivanovStaticText.typeText("J")
+//        
+//        let textField2 = element.children(matching: .textField).element
+//        textField2.tap()
+//       
+//        staticText.tap()
+//        textField2.typeText("J")
+//        app.buttons["Sign In"].tap()
+      
+                        
+
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    func testExampleError() throws {
+        // UI tests must launch the application that they test.
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        let app = XCUIApplication()
+        app.launch()
+        let signUpButton = app.buttons["Sign Up"]
+        signUpButton.tap()
+        
+        let ivanovTextField = app.textFields["Ivanov"]
+      
+        ivanovTextField.tap()
+        ivanovTextField.typeText("G")
+        
+        let ivanovMailComTextField = app.textFields["Ivanov@mail.com"]
+        ivanovMailComTextField.tap()
+        ivanovMailComTextField.typeText("@g")
+        
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        let secureTextField = element.children(matching: .secureTextField).matching(identifier: "●●●●●●").element(boundBy: 0)
+        secureTextField.tap()
+        secureTextField.typeText("g")
+        
+        let secureTextField2 = element.children(matching: .secureTextField).matching(identifier: "●●●●●●").element(boundBy: 1)
+        secureTextField2.tap()
+        secureTextField2.typeText("g")
+        signUpButton.tap()
+        ivanovTextField.tap()
+        ivanovTextField.typeText("G")
+        
+        let secureTextField3 = app.secureTextFields["●●●●●●"]
+        secureTextField3.tap()
+        secureTextField3.typeText("g")
+        app.buttons["Sign In"].tap()
+    
+
+     
+        app.textFields["Ivanov"].tap()
+        app.textFields["Ivanov"].typeText("ghj")
+        
+        let secureTextField4 = app.secureTextFields["●●●●●●"]
+        secureTextField4.tap()
+        secureTextField4.typeText("dfgh")
+        
+        app.buttons["Sign In"].tap()
+        
+
+        
+//        let app = XCUIApplication()
+//        app.launch()
+//        let signUpButton = app.buttons["Sign Up"]
+//        signUpButton.tap()
+//
+//        let ivanovStaticText = app.staticTexts["Ivanov"]
+//        ivanovStaticText.tap()
+//        ivanovStaticText.typeText("J")
+//        app.staticTexts["Ivanov@mail.com"].tap()
+//        app.staticTexts["Ivanov@mail.com"].typeText("@J")
+//        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+//        let textField = element.children(matching: .textField).element(boundBy: 0)
+//        textField.tap()
+//        textField.typeText("J")
+//        element.children(matching: .staticText).matching(identifier: "●●●●●●").element(boundBy: 0).tap()
+//        textField.tap()
+//
+//        let staticText = app.staticTexts["●●●●●●"]
+//        staticText.tap()
+//        textField.tap()
+//        textField.typeText("J")
+//        signUpButton.tap()
+//        ivanovStaticText.tap()
+//        ivanovStaticText.typeText("J")
+//
+//        let textField2 = element.children(matching: .textField).element
+//        textField2.tap()
+//
+//        staticText.tap()
+//        textField2.typeText("J")
+//        app.buttons["Sign In"].tap()
+      
+                        
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
