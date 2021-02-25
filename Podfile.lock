@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.4.1)
+  - SSSwiftUIGIFView (1.0.0)
+  - SwiftyJSON (5.0.0)
+  - YouTubePlayer (0.7.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - SSSwiftUIGIFView
+  - SwiftyJSON
+  - YouTubePlayer
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SSSwiftUIGIFView
+    - SwiftyJSON
+    - YouTubePlayer
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  SSSwiftUIGIFView: f109262cd0baff190b58b519c0e94f7622c428d4
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
+
+PODFILE CHECKSUM: 29e912f3417f2e0ae7f7d1c218621cbfe5cfee59
+
+COCOAPODS: 1.10.1
