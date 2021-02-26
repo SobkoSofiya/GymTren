@@ -23,7 +23,7 @@ struct B:View {
                 Image("les")
                 Text("Lessons").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(1)
-            Profile( Swift22: $Swift22).tabItem { VStack{
+            Reports( Swift22: $Swift22).tabItem { VStack{
                 Image("re")
                 Text("Reports").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(2)
@@ -77,12 +77,12 @@ struct Main: View {
               
                     VStack(spacing:20){
                 Button(action: {
-                    Swift22 = 6
+                    Swift22 = 12
                 }, label: {
                     Image("hand")
                 })
                 Button(action: {
-                   
+                    Swift22 = 6
                 }, label: {
                     Image("sp")
                 })
@@ -95,11 +95,11 @@ struct Main: View {
                     }
                 })
                 Button(action: {
-                    
+                    Swift22 = 15
                 }, label: {
                     ZStack{
                     Image("leg")
-                        Text("Torso").font(.custom("ND Astroneer", size: 18)).foregroundColor(Color("tt")).offset(x: -130, y: 50)
+                        Text("Legs").font(.custom("ND Astroneer", size: 18)).foregroundColor(Color("tt")).offset(x: -130, y: 50)
                     }
                 })
                     }

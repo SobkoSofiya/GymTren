@@ -1,20 +1,18 @@
 //
-//  StopPush.swift
+//  StopHand.swift
 //  GymTren
 //
 //  Created by Sofi on 26.02.2021.
 //
 
 import SwiftUI
-import SSSwiftUIGIFView
-
-struct v2:View {
+struct a3:View {
     @State var item = 0
     @Binding var Swift22:Int
     var body: some View{
         TabView(selection:$item){
            
-            StopPush(Swift22: $Swift22).tabItem { VStack{
+            StopHand(Swift22: $Swift22).tabItem { VStack{
                 Image("m")
                 Text("Plan").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(0)
@@ -36,10 +34,10 @@ struct v2:View {
     }
 }
 
-struct StopPush: View {
-    @State var c = UserDefaults.standard.integer(forKey: "Cont")
+struct StopHand: View {
+    @State var c = UserDefaults.standard.integer(forKey: "ContHand")
     @State var timer = Timer.publish(every: 1, on: .main, in: .tracking)
-    @State var all = UserDefaults.standard.integer(forKey: "All")
+   @State var all = UserDefaults.standard.integer(forKey: "All")
     @Binding var Swift22:Int
     var body: some View {
         ZStack{
@@ -48,7 +46,7 @@ struct StopPush: View {
                 .background(LinearGradient(gradient: Gradient(colors: [Color("le"), Color("tr")]), startPoint: .leading, endPoint: .trailing))
             VStack(spacing:0){
                 Group{
-                Text("Push ups").font(.custom("ND Astroneer", size: 24)).foregroundColor(.white)
+                Text("Trunk inclinations").font(.custom("ND Astroneer", size: 24)).foregroundColor(.white)
                 HStack(spacing:110){
                     VStack{
                         Text("\(c)").foregroundColor(.white )
@@ -70,7 +68,7 @@ struct StopPush: View {
                       
                         
                         Button(action: {
-                        Swift22 = 3
+                           Swift22 = 3
                             UserDefaults.standard.set(all+c, forKey: "All")
                         }, label: {
                             ZStack{
@@ -81,8 +79,8 @@ struct StopPush: View {
                             Text("Succes").font(.custom("ND Astroneer", size: 75)).foregroundColor(Color("ci"))
                             }
                         }).offset( y: -100)
-                   
-                        
+                     
+                      
                     }
                 }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height-100, alignment: .center)
                Spacer()
@@ -91,8 +89,8 @@ struct StopPush: View {
     }
 }
 
-struct StopPush_Previews: PreviewProvider {
+struct StopHand_Previews: PreviewProvider {
     static var previews: some View {
-        StopPush(Swift22: .constant(1))
+        StopHand(Swift22: .constant(1))
     }
 }

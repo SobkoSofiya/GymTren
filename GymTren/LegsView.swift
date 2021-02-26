@@ -1,18 +1,18 @@
 //
-//  Toso.swift
+//  LegsView.swift
 //  GymTren
 //
 //  Created by Sofi on 26.02.2021.
 //
 
 import SwiftUI
-struct p:View {
+struct l:View {
     @State var item = 0
     @Binding var Swift22:Int
     var body: some View{
         TabView(selection:$item){
            
-            Toso(Swift22: $Swift22).tabItem { VStack{
+            LegsView(Swift22: $Swift22).tabItem { VStack{
                 Image("m")
                 Text("Plan").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(0)
@@ -34,9 +34,9 @@ struct p:View {
     }
 }
 
-struct Toso: View {
-    @State var contDay1 = 1
-    @State var c = UserDefaults.standard.integer(forKey: "ContPush")
+struct LegsView: View {
+    @State var contDay3 = 1
+    @State var c = UserDefaults.standard.integer(forKey: "ContRun")
     let colums = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -54,7 +54,7 @@ struct Toso: View {
                 .foregroundColor(.clear)
                 .background(LinearGradient(gradient: Gradient(colors: [Color("le"), Color("tr")]), startPoint: .leading, endPoint: .trailing))
             VStack{
-                Text("Sit-up").font(.custom("ND Astroneer", size: 24)).foregroundColor(.white)
+                Text("Run").font(.custom("ND Astroneer", size: 24)).foregroundColor(.white)
                 ZStack(alignment:.top){
                     Color.white
                     VStack{
@@ -63,15 +63,15 @@ struct Toso: View {
                         
                         ForEach(1...60, id:\.self){ item in
                         Button(action: {
-                            if contDay1 == item {
-                                Swift22 = 9
-                                contDay1 += 1
-                                UserDefaults.standard.set(contDay1, forKey: "ContPush")
-                            } else if item > contDay1{
+                            if contDay3 == item {
+                                Swift22 = 16
+                                contDay3 += 1
+                                UserDefaults.standard.set(contDay3, forKey: "ContRun")
+                            } else if item > contDay3{
                                 erro.toggle()
                                 mess = "Вы еще не дошли до этой тренеровки"
                                 
-                            }else if item < contDay1 {
+                            }else if item < contDay3 {
                                 erro.toggle()
                                 mess = "Тренеровка уже пройдена"
                             }
@@ -80,8 +80,8 @@ struct Toso: View {
                                 Circle().strokeBorder(Color("ci"),lineWidth: 1 )
                                     .frame(width: 42, height: 42, alignment: .center)
                                     .foregroundColor(.clear)
-                                    .background(Circle().foregroundColor(item < contDay1 ?  Color("ci") : .white))
-                                Text("\(item)").font(.custom("ND Astroneer", size: 24)).foregroundColor(item < contDay1 ? .white : Color("ci"))
+                                    .background(Circle().foregroundColor(item < contDay3 ?  Color("ci") : .white))
+                                Text("\(item)").font(.custom("ND Astroneer", size: 24)).foregroundColor(item < contDay3 ? .white : Color("ci"))
                             }
                         }).alert(isPresented: $erro, content: {
                             Alert(title: Text("Error"), message: Text("\(mess)"), dismissButton: .default(Text("Ok")))
@@ -95,11 +95,11 @@ struct Toso: View {
                                 .frame(width: 326, height: 45, alignment: .center)
                                 .foregroundColor(.clear)
                             RoundedRectangle(cornerRadius: 23)
-                                .frame(width:contDay1 == 1 ? 0 : contDay1 <= 12 ? 73 : (326/60*CGFloat(contDay1)), height: 45, alignment: .center)
+                                .frame(width:contDay3 == 1 ? 0 : contDay3 <= 12 ? 73 : (326/60*CGFloat(contDay3)), height: 45, alignment: .center)
                                 .foregroundColor(Color("ci"))
                             
                         }
-                            Text("\( contDay1 == 1 ? 0 : 100/61*CGFloat(contDay1))%").font(.custom("ND Astroneer", size: 24)).foregroundColor(contDay1 <= 40 ?  Color("ci") :.white )
+                            Text("\( contDay3 == 1 ? 0 : 100/61*CGFloat(contDay3))%").font(.custom("ND Astroneer", size: 24)).foregroundColor(contDay3 <= 40 ?  Color("ci") :.white )
                         }
                     }
                 }
@@ -107,17 +107,17 @@ struct Toso: View {
             }.offset( y: 50)
         }.edgesIgnoringSafeArea(.all).onAppear(perform: {
             if c == 0{
-                contDay1 = 1
+                contDay3 = 1
             }else {
-                contDay1 = UserDefaults.standard.integer(forKey: "ContPush")
+                contDay3 = UserDefaults.standard.integer(forKey: "ContRun")
             }
             
         })
     }
 }
 
-struct Toso_Previews: PreviewProvider {
+struct LegsView_Previews: PreviewProvider {
     static var previews: some View {
-        Toso(Swift22: .constant(1))
+        LegsView( Swift22: .constant(1))
     }
 }

@@ -44,6 +44,15 @@
 		C3BE642B25E8EB0500DB87C5 /* StopTorso.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE642A25E8EB0500DB87C5 /* StopTorso.swift */; };
 		C3BE643025E8EB2600DB87C5 /* orig.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3BE642F25E8EB2600DB87C5 /* orig.gif */; };
 		C3BE643525E8EB2C00DB87C5 /* otzimania.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3BE643425E8EB2C00DB87C5 /* otzimania.gif */; };
+		C3BE645125E90D0A00DB87C5 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE645025E90D0A00DB87C5 /* Hand.swift */; };
+		C3BE645925E90D1500DB87C5 /* HandDe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE645825E90D1500DB87C5 /* HandDe.swift */; };
+		C3BE645E25E90D4000DB87C5 /* StopHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE645D25E90D4000DB87C5 /* StopHand.swift */; };
+		C3BE646325E90D4D00DB87C5 /* LegsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE646225E90D4D00DB87C5 /* LegsView.swift */; };
+		C3BE646825E90D5800DB87C5 /* LegDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE646725E90D5800DB87C5 /* LegDetail.swift */; };
+		C3BE647525E90D8600DB87C5 /* RunList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE647425E90D8600DB87C5 /* RunList.swift */; };
+		C3BE647A25E90EC600DB87C5 /* hand.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3BE647925E90EC600DB87C5 /* hand.gif */; };
+		C3BE647F25E90ECC00DB87C5 /* run.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3BE647E25E90ECC00DB87C5 /* run.gif */; };
+		C3BE648425E9153000DB87C5 /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE648325E9153000DB87C5 /* Reports.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +118,15 @@
 		C3BE642A25E8EB0500DB87C5 /* StopTorso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTorso.swift; sourceTree = "<group>"; };
 		C3BE642F25E8EB2600DB87C5 /* orig.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = orig.gif; sourceTree = "<group>"; };
 		C3BE643425E8EB2C00DB87C5 /* otzimania.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = otzimania.gif; sourceTree = "<group>"; };
+		C3BE645025E90D0A00DB87C5 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		C3BE645825E90D1500DB87C5 /* HandDe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandDe.swift; sourceTree = "<group>"; };
+		C3BE645D25E90D4000DB87C5 /* StopHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopHand.swift; sourceTree = "<group>"; };
+		C3BE646225E90D4D00DB87C5 /* LegsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegsView.swift; sourceTree = "<group>"; };
+		C3BE646725E90D5800DB87C5 /* LegDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegDetail.swift; sourceTree = "<group>"; };
+		C3BE647425E90D8600DB87C5 /* RunList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunList.swift; sourceTree = "<group>"; };
+		C3BE647925E90EC600DB87C5 /* hand.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hand.gif; sourceTree = "<group>"; };
+		C3BE647E25E90ECC00DB87C5 /* run.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = run.gif; sourceTree = "<group>"; };
+		C3BE648325E9153000DB87C5 /* Reports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reports.swift; sourceTree = "<group>"; };
 		C424A1E3E80B7B8373684EA0 /* Pods-GymTren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTren.release.xcconfig"; path = "Target Support Files/Pods-GymTren/Pods-GymTren.release.xcconfig"; sourceTree = "<group>"; };
 		DFE0851C87E1BCA271448DE2 /* Pods_GymTren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16EB6B52738A470098FFC5B /* Pods-GymTrenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTrenTests.debug.xcconfig"; path = "Target Support Files/Pods-GymTrenTests/Pods-GymTrenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +200,9 @@
 		C382967025E7BFB500520A3A /* GymTren */ = {
 			isa = PBXGroup;
 			children = (
+				C3BE647925E90EC600DB87C5 /* hand.gif */,
 				C3BE642F25E8EB2600DB87C5 /* orig.gif */,
+				C3BE647E25E90ECC00DB87C5 /* run.gif */,
 				C3BE643425E8EB2C00DB87C5 /* otzimania.gif */,
 				C382967125E7BFB500520A3A /* AppDelegate.swift */,
 				C382967325E7BFB500520A3A /* SceneDelegate.swift */,
@@ -209,6 +229,13 @@
 				C3BE641B25E8EAE700DB87C5 /* Toso.swift */,
 				C3BE642025E8EAEF00DB87C5 /* TorsoDetail.swift */,
 				C3BE642A25E8EB0500DB87C5 /* StopTorso.swift */,
+				C3BE645025E90D0A00DB87C5 /* Hand.swift */,
+				C3BE645825E90D1500DB87C5 /* HandDe.swift */,
+				C3BE645D25E90D4000DB87C5 /* StopHand.swift */,
+				C3BE646225E90D4D00DB87C5 /* LegsView.swift */,
+				C3BE646725E90D5800DB87C5 /* LegDetail.swift */,
+				C3BE647425E90D8600DB87C5 /* RunList.swift */,
+				C3BE648325E9153000DB87C5 /* Reports.swift */,
 				C382967725E7BFB800520A3A /* Assets.xcassets */,
 				C382967C25E7BFB800520A3A /* LaunchScreen.storyboard */,
 				C382967F25E7BFB800520A3A /* Info.plist */,
@@ -367,8 +394,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BE647F25E90ECC00DB87C5 /* run.gif in Resources */,
 				C382967E25E7BFB800520A3A /* LaunchScreen.storyboard in Resources */,
 				C38296B225E7C39B00520A3A /* ND Astroneer.ttf in Resources */,
+				C3BE647A25E90EC600DB87C5 /* hand.gif in Resources */,
 				C3BE643025E8EB2600DB87C5 /* orig.gif in Resources */,
 				C382967B25E7BFB800520A3A /* Preview Assets.xcassets in Resources */,
 				C382967825E7BFB800520A3A /* Assets.xcassets in Resources */,
@@ -501,10 +530,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BE641C25E8EAE700DB87C5 /* Toso.swift in Sources */,
+				C3BE646825E90D5800DB87C5 /* LegDetail.swift in Sources */,
 				C382967225E7BFB500520A3A /* AppDelegate.swift in Sources */,
 				C3BE642125E8EAEF00DB87C5 /* TorsoDetail.swift in Sources */,
 				C38296E825E7DCA300520A3A /* SignUp.swift in Sources */,
+				C3BE645125E90D0A00DB87C5 /* Hand.swift in Sources */,
+				C3BE647525E90D8600DB87C5 /* RunList.swift in Sources */,
 				C38296C425E7C4D200520A3A /* ellow.swift in Sources */,
+				C3BE645E25E90D4000DB87C5 /* StopHand.swift in Sources */,
 				C3BE640F25E8EAC600DB87C5 /* PushUpsHand.swift in Sources */,
 				C382967425E7BFB500520A3A /* SceneDelegate.swift in Sources */,
 				C38296C925E7C4E300520A3A /* Hellow5.swift in Sources */,
@@ -514,9 +547,12 @@
 				C38296ED25E7DCAA00520A3A /* Model.swift in Sources */,
 				C38296A825E7C2CD00520A3A /* Swift2.swift in Sources */,
 				C38296DB25E7CE2200520A3A /* LogIn.swift in Sources */,
+				C3BE646325E90D4D00DB87C5 /* LegsView.swift in Sources */,
 				C382970225E7F48B00520A3A /* Main.swift in Sources */,
 				C3BE642625E8EAFB00DB87C5 /* StopPush.swift in Sources */,
 				C38296BF25E7C4CA00520A3A /* Hellow3.swift in Sources */,
+				C3BE645925E90D1500DB87C5 /* HandDe.swift in Sources */,
+				C3BE648425E9153000DB87C5 /* Reports.swift in Sources */,
 				C38296BA25E7C4C500520A3A /* Hellow2.swift in Sources */,
 				C382970725E7F78F00520A3A /* Lesson.swift in Sources */,
 				C382967625E7BFB500520A3A /* ContentView.swift in Sources */,

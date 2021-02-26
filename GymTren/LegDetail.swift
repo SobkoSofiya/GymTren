@@ -1,5 +1,5 @@
 //
-//  PushUpsDetail.swift
+//  LegDetail.swift
 //  GymTren
 //
 //  Created by Sofi on 26.02.2021.
@@ -7,14 +7,13 @@
 
 import SwiftUI
 import SSSwiftUIGIFView
-
-struct v1:View {
+struct l2:View {
     @State var item = 0
     @Binding var Swift22:Int
     var body: some View{
         TabView(selection:$item){
            
-            PushUpsDetail(Swift22: $Swift22).tabItem { VStack{
+            LegDetail(Swift22: $Swift22).tabItem { VStack{
                 Image("m")
                 Text("Plan").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(0)
@@ -35,13 +34,10 @@ struct v1:View {
         }
     }
 }
-
-struct PushUpsDetail: View {
-    @State var c = UserDefaults.standard.integer(forKey: "Cont")
-    @State var timer = Timer.publish(every: 1, on: .main, in: .common)
-   @State var sec = 0
-    @State var min = 0
-    @State var start = false
+struct LegDetail: View {
+    @State var c = UserDefaults.standard.integer(forKey: "ContRun")
+    @State var timer = Timer.publish(every: 1, on: .main, in: .tracking)
+   
     @Binding var Swift22:Int
     var body: some View {
         ZStack{
@@ -50,33 +46,38 @@ struct PushUpsDetail: View {
                 .background(LinearGradient(gradient: Gradient(colors: [Color("le"), Color("tr")]), startPoint: .leading, endPoint: .trailing))
             VStack(spacing:0){
                 Group{
-                Text("Push ups").font(.custom("ND Astroneer", size: 24)).foregroundColor(.white)
+                    ZStack{
+                    Text("Run").font(.custom("ND Astroneer", size: 24)).foregroundColor(.white).offset( y: 20)
+                        HStack{
+                            Spacer()
+                            Image("m").resizable().frame(width: 30, height: 30, alignment: .center).offset(x: -10, y: 20)
+                           
+                        }
+                    }
+                    
                 HStack(spacing:110){
                     VStack{
                         Text("\(c)").foregroundColor(.white )
                         Text("Scores").foregroundColor(.white)
                     }
                     VStack{
-                        Text("\(min):\(sec)").foregroundColor(.white )
+                        Text("0").foregroundColor(.white )
                         Text("Minutes").foregroundColor(.white)
                     }
                     VStack{
                         Text("0").foregroundColor(.white )
                         Text("Kcal").foregroundColor(.white)
                     }
-                }.font(.custom("ND Astroneer", size: 18))
+                }.font(.custom("ND Astroneer", size: 18)).hidden()
                 }.offset( y: -5)
                 ZStack{
                     Color.white
                     VStack{
-                        SwiftUIGIFPlayerView(gifName: "otzimania").frame(width: 330, height: 166, alignment: .center).padding(.top,40).padding(.bottom,10)
-                        
+                        SwiftUIGIFPlayerView(gifName: "run").frame(width: 330, height: 166, alignment: .center).padding(.top,80)
+                        ZStack{
                         Button(action: {
                             if c != 0{
                             c -= 1
-                            }
-                            if start == false{
-                                start.toggle()
                             }
                         }, label: {
                             ZStack{
@@ -86,11 +87,36 @@ struct PushUpsDetail: View {
                                 .foregroundColor(.clear)
                             Text("Tap").font(.custom("ND Astroneer", size: 75)).foregroundColor(Color("ci"))
                             }
-                        })
+                        }).hidden()
+                            VStack{
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 33) .strokeBorder(Color("ci") )
+                                    .frame(width: 267, height: 66, alignment: .center)
+                                    .foregroundColor(.clear)
+                                HStack{
+                                    Text("Distance").font(.custom("ND Astroneer", size: 24)).foregroundColor(Color("ci"))
+                                    Text("0 km").font(.custom("ND Astroneer", size: 24)).foregroundColor(Color("ci")).padding(.leading,50)
+                                    
+                                }
+                               
+                                
+                            }
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 33) .strokeBorder(Color("ci") )
+                                        .frame(width: 267, height: 66, alignment: .center)
+                                        .foregroundColor(.clear)
+                                    HStack{
+                                        Text("Timer").font(.custom("ND Astroneer", size: 24)).foregroundColor(Color("ci"))
+                                        Text("00:00:00").font(.custom("ND Astroneer", size: 24)).foregroundColor(Color("ci")).padding(.leading,40)
+                                    }
+                                   
+                                    
+                                }
+                            }
+                            
+                        }
                         Button(action: {
-                            start = false
-                            Swift22 = 10
-                           
+                            Swift22 = 17
                         }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 25.0) .strokeBorder(Color("ci") )
@@ -106,22 +132,11 @@ struct PushUpsDetail: View {
                Spacer()
             }.offset( y: 45)
         }.edgesIgnoringSafeArea(.all)
-        .onReceive(timer, perform: { _ in
-            if start{
-                if sec <= 59 {
-                    sec += 1
-                }else{
-                    sec = 0
-                    min += 1
-                }
-            }
-        })
-       
     }
 }
 
-struct PushUpsDetail_Previews: PreviewProvider {
+struct LegDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PushUpsDetail(Swift22: .constant(1))
+        LegDetail( Swift22: .constant(1))
     }
 }

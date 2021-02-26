@@ -78,7 +78,19 @@ struct Swift4: View {
      }
     else if Swift22 == 11{
         p3( Swift22: $Swift22)
-     }
+     } else if Swift22 == 12{
+        a( Swift22: $Swift22)
+     } else if Swift22 == 13{
+        a2( Swift22: $Swift22)
+     } else if Swift22 == 14{
+        a3( Swift22: $Swift22)
+     } else if Swift22 == 15{
+        l( Swift22: $Swift22)
+     } else if Swift22 == 16{
+        l2( Swift22: $Swift22)
+     } else if Swift22 == 17{
+        l3( Swift22: $Swift22)
+     } 
     
         }
     }

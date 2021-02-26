@@ -22,7 +22,7 @@ struct p2:View {
                 Image("les")
                 Text("Lessons").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(1)
-            Profile( Swift22: $Swift22).tabItem { VStack{
+            Reports( Swift22: $Swift22).tabItem { VStack{
                 Image("re")
                 Text("Reports").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(2)
