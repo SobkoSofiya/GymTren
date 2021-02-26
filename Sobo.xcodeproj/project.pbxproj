@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,14 @@
 		C3BE64B225E91E3200DB87C5 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE64B125E91E3200DB87C5 /* ComplicationController.swift */; };
 		C3BE64B425E91E3400DB87C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BE64B325E91E3400DB87C5 /* Assets.xcassets */; };
 		C3BE64B725E91E3400DB87C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BE64B625E91E3400DB87C5 /* Preview Assets.xcassets */; };
+		C3BE64CC25E91E7A00DB87C5 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C3BE64CB25E91E7A00DB87C5 /* SwiftyJSON */; };
+		C3BE64D225E91EBE00DB87C5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3BE64D125E91EBE00DB87C5 /* Alamofire */; };
+		C3BE64D725E9211600DB87C5 /* ND Astroneer.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3BE64D625E9211600DB87C5 /* ND Astroneer.ttf */; };
+		C3BE64E425E9237A00DB87C5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE64E325E9237A00DB87C5 /* Model.swift */; };
+		C3BE64E925E9238300DB87C5 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE64E825E9238300DB87C5 /* ModelView.swift */; };
+		C3BE64F625E9247600DB87C5 /* Swift2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE64F525E9247600DB87C5 /* Swift2.swift */; };
+		C3BE64FE25E924D400DB87C5 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE64FD25E924D400DB87C5 /* Main.swift */; };
+		C3BE650325E928F800DB87C5 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE650225E928F800DB87C5 /* Add.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C3BE648F25E91E2F00DB87C5 /* Sobo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sobo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BE648F25E91E2F00DB87C5 /* Sobko Gym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sobko Gym.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BE649325E91E3000DB87C5 /* Sobo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sobo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BE649925E91E3000DB87C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C3BE649B25E91E3200DB87C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +88,12 @@
 		C3BE64B625E91E3400DB87C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3BE64B825E91E3400DB87C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3BE64B925E91E3400DB87C5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C3BE64D625E9211600DB87C5 /* ND Astroneer.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ND Astroneer.ttf"; sourceTree = "<group>"; };
+		C3BE64E325E9237A00DB87C5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C3BE64E825E9238300DB87C5 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		C3BE64F525E9247600DB87C5 /* Swift2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift2.swift; sourceTree = "<group>"; };
+		C3BE64FD25E924D400DB87C5 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		C3BE650225E928F800DB87C5 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BE64CC25E91E7A00DB87C5 /* SwiftyJSON in Frameworks */,
+				C3BE64D225E91EBE00DB87C5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +121,7 @@
 		C3BE649025E91E2F00DB87C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3BE648F25E91E2F00DB87C5 /* Sobo.app */,
+				C3BE648F25E91E2F00DB87C5 /* Sobko Gym.app */,
 				C3BE649325E91E3000DB87C5 /* Sobo WatchKit App.app */,
 				C3BE64A225E91E3200DB87C5 /* Sobo WatchKit Extension.appex */,
 			);
@@ -125,8 +141,14 @@
 		C3BE64A625E91E3200DB87C5 /* Sobo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C3BE64D625E9211600DB87C5 /* ND Astroneer.ttf */,
 				C3BE64A725E91E3200DB87C5 /* HostingController.swift */,
+				C3BE64F525E9247600DB87C5 /* Swift2.swift */,
+				C3BE64FD25E924D400DB87C5 /* Main.swift */,
+				C3BE650225E928F800DB87C5 /* Add.swift */,
 				C3BE64A925E91E3200DB87C5 /* ContentView.swift */,
+				C3BE64E325E9237A00DB87C5 /* Model.swift */,
+				C3BE64E825E9238300DB87C5 /* ModelView.swift */,
 				C3BE64AB25E91E3200DB87C5 /* ExtensionDelegate.swift */,
 				C3BE64AD25E91E3200DB87C5 /* NotificationController.swift */,
 				C3BE64AF25E91E3200DB87C5 /* NotificationView.swift */,
@@ -164,7 +186,7 @@
 			);
 			name = Sobo;
 			productName = Sobo;
-			productReference = C3BE648F25E91E2F00DB87C5 /* Sobo.app */;
+			productReference = C3BE648F25E91E2F00DB87C5 /* Sobko Gym.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		C3BE649225E91E3000DB87C5 /* Sobo WatchKit App */ = {
@@ -197,6 +219,10 @@
 			dependencies = (
 			);
 			name = "Sobo WatchKit Extension";
+			packageProductDependencies = (
+				C3BE64CB25E91E7A00DB87C5 /* SwiftyJSON */,
+				C3BE64D125E91EBE00DB87C5 /* Alamofire */,
+			);
 			productName = "Sobo WatchKit Extension";
 			productReference = C3BE64A225E91E3200DB87C5 /* Sobo WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -230,6 +256,10 @@
 				Base,
 			);
 			mainGroup = C3BE648825E91E2F00DB87C5;
+			packageReferences = (
+				C3BE64CA25E91E7A00DB87C5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				C3BE64D025E91EBE00DB87C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C3BE649025E91E2F00DB87C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -246,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BE64D725E9211600DB87C5 /* ND Astroneer.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3BE64FE25E924D400DB87C5 /* Main.swift in Sources */,
+				C3BE650325E928F800DB87C5 /* Add.swift in Sources */,
+				C3BE64E425E9237A00DB87C5 /* Model.swift in Sources */,
 				C3BE64AA25E91E3200DB87C5 /* ContentView.swift in Sources */,
 				C3BE64A825E91E3200DB87C5 /* HostingController.swift in Sources */,
+				C3BE64F625E9247600DB87C5 /* Swift2.swift in Sources */,
 				C3BE64AE25E91E3200DB87C5 /* NotificationController.swift in Sources */,
 				C3BE64AC25E91E3200DB87C5 /* ExtensionDelegate.swift in Sources */,
 				C3BE64B025E91E3200DB87C5 /* NotificationView.swift in Sources */,
+				C3BE64E925E9238300DB87C5 /* ModelView.swift in Sources */,
 				C3BE64B225E91E3200DB87C5 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,7 +551,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kp11.Sobo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sobko Gym";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -527,7 +563,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kp11.Sobo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sobko Gym";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -572,6 +608,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3BE64CA25E91E7A00DB87C5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C3BE64D025E91EBE00DB87C5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3BE64CB25E91E7A00DB87C5 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3BE64CA25E91E7A00DB87C5 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		C3BE64D125E91EBE00DB87C5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3BE64D025E91EBE00DB87C5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3BE648925E91E2F00DB87C5 /* Project object */;
 }
