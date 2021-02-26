@@ -40,6 +40,8 @@ struct Swift2: View {
             LogIn(Swift22: $Swift22)
         }else if Swift22 == 7{
             Hellow3_2(Swift22: $Swift22)
+        }else if Swift22 == 8{
+            Swift3()
         }
         }
     }
@@ -53,7 +55,11 @@ struct Swift4: View {
         } else if Swift22 == 2{
             SignUp(Swift22: $Swift22)
         } else if Swift22 == 3{
-            SwiftUIView(Swift22: $Swift22)
+            B(Swift22: $Swift22)
+        } else if Swift22 == 4{
+            Profile(Swift22: $Swift22)
+        }else if Swift22 == 5{
+           Swift3()
         }
         }
     }

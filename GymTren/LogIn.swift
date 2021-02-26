@@ -57,6 +57,9 @@ struct LogIn: View {
                                 } else if model.perehod == 3{
                                     erro.toggle()
                                     mess = "Error username or password"
+                                }else if model.perehod == 4{
+                                    erro.toggle()
+                                    mess = "User is active"
                                 }
                             }
                         }else{

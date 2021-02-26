@@ -44,10 +44,11 @@ struct Hellow5: View {
                 Button(action: {
                     if w != "" && h != ""{
                     clr = 2
-                        Swift22 = 6
+                       
                         UserDefaults.standard.setValue(w, forKey: "W")
                         UserDefaults.standard.setValue(h, forKey: "H")
                         UserDefaults.standard.set(true, forKey: "l")
+                        Swift22 = 8
                     }
                     
                 }, label: {

@@ -10,6 +10,7 @@
 		1C203356A36777B9F3036BF5 /* Pods_GymTren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE0851C87E1BCA271448DE2 /* Pods_GymTren.framework */; };
 		97B2BAB8EDF224E2BDEBBA5B /* Pods_GymTren_GymTrenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E327060E7032549B7EA5BD9 /* Pods_GymTren_GymTrenUITests.framework */; };
 		99823548CDFF9A56BAF500DA /* Pods_GymTrenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2BE3586F3D0C8AB248058C /* Pods_GymTrenTests.framework */; };
+		C3818A2A25E8D933000FB90E /* We.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3818A2925E8D933000FB90E /* We.swift */; };
 		C382967225E7BFB500520A3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382967125E7BFB500520A3A /* AppDelegate.swift */; };
 		C382967425E7BFB500520A3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382967325E7BFB500520A3A /* SceneDelegate.swift */; };
 		C382967625E7BFB500520A3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382967525E7BFB500520A3A /* ContentView.swift */; };
@@ -32,6 +33,9 @@
 		C38296F225E7DCB200520A3A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38296F125E7DCB200520A3A /* ViewModel.swift */; };
 		C38296F825E7DD5200520A3A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C38296F725E7DD5200520A3A /* SwiftyJSON */; };
 		C38296FD25E7E28B00520A3A /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38296FC25E7E28B00520A3A /* SwiftUIView.swift */; };
+		C382970225E7F48B00520A3A /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382970125E7F48B00520A3A /* Main.swift */; };
+		C382970725E7F78F00520A3A /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382970625E7F78F00520A3A /* Lesson.swift */; };
+		C382970C25E7FCE300520A3A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382970B25E7FCE300520A3A /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,7 @@
 		775AF2BC4C3DA48906F0D8E2 /* Pods-GymTren-GymTrenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTren-GymTrenUITests.debug.xcconfig"; path = "Target Support Files/Pods-GymTren-GymTrenUITests/Pods-GymTren-GymTrenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B2BE3586F3D0C8AB248058C /* Pods_GymTrenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTrenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B60E7F08ED0F96A8D871368 /* Pods-GymTren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTren.debug.xcconfig"; path = "Target Support Files/Pods-GymTren/Pods-GymTren.debug.xcconfig"; sourceTree = "<group>"; };
+		C3818A2925E8D933000FB90E /* We.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = We.swift; sourceTree = "<group>"; };
 		C382966E25E7BFB500520A3A /* GymTren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymTren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C382967125E7BFB500520A3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C382967325E7BFB500520A3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +90,9 @@
 		C38296EC25E7DCAA00520A3A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C38296F125E7DCB200520A3A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C38296FC25E7E28B00520A3A /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		C382970125E7F48B00520A3A /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		C382970625E7F78F00520A3A /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		C382970B25E7FCE300520A3A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		C424A1E3E80B7B8373684EA0 /* Pods-GymTren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTren.release.xcconfig"; path = "Target Support Files/Pods-GymTren/Pods-GymTren.release.xcconfig"; sourceTree = "<group>"; };
 		DFE0851C87E1BCA271448DE2 /* Pods_GymTren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16EB6B52738A470098FFC5B /* Pods-GymTrenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTrenTests.debug.xcconfig"; path = "Target Support Files/Pods-GymTrenTests/Pods-GymTrenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +181,10 @@
 				C38296DA25E7CE2200520A3A /* LogIn.swift */,
 				C38296E725E7DCA300520A3A /* SignUp.swift */,
 				C38296FC25E7E28B00520A3A /* SwiftUIView.swift */,
+				C382970125E7F48B00520A3A /* Main.swift */,
+				C382970625E7F78F00520A3A /* Lesson.swift */,
+				C382970B25E7FCE300520A3A /* Profile.swift */,
+				C3818A2925E8D933000FB90E /* We.swift */,
 				C382967725E7BFB800520A3A /* Assets.xcassets */,
 				C382967C25E7BFB800520A3A /* LaunchScreen.storyboard */,
 				C382967F25E7BFB800520A3A /* Info.plist */,
@@ -469,13 +481,17 @@
 				C38296C925E7C4E300520A3A /* Hellow5.swift in Sources */,
 				C38296E025E7D16F00520A3A /* Hellow3-2.swift in Sources */,
 				C38296F225E7DCB200520A3A /* ViewModel.swift in Sources */,
+				C382970C25E7FCE300520A3A /* Profile.swift in Sources */,
 				C38296ED25E7DCAA00520A3A /* Model.swift in Sources */,
 				C38296A825E7C2CD00520A3A /* Swift2.swift in Sources */,
 				C38296DB25E7CE2200520A3A /* LogIn.swift in Sources */,
+				C382970225E7F48B00520A3A /* Main.swift in Sources */,
 				C38296BF25E7C4CA00520A3A /* Hellow3.swift in Sources */,
 				C38296BA25E7C4C500520A3A /* Hellow2.swift in Sources */,
+				C382970725E7F78F00520A3A /* Lesson.swift in Sources */,
 				C382967625E7BFB500520A3A /* ContentView.swift in Sources */,
 				C38296AD25E7C30D00520A3A /* Hellow.swift in Sources */,
+				C3818A2A25E8D933000FB90E /* We.swift in Sources */,
 				C38296FD25E7E28B00520A3A /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

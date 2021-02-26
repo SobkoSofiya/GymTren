@@ -57,9 +57,9 @@ struct Hellow2: View {
                 Button(action: {
                     if clr != 1{
                     clr2 = 4
-                    if clr == 2 {
+                    if clr == 3 {
                         Swift22 = 3
-                    } else if clr == 3{
+                    } else if clr == 2{
                         Swift22 = 7
                     }
                     }
