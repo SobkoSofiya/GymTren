@@ -13,10 +13,12 @@ struct B:View {
     @Binding var Swift22:Int
     var body: some View{
         TabView(selection:$item){
-            Main().tabItem { VStack{
+           
+            Main(Swift22: $Swift22).tabItem { VStack{
                 Image("m")
                 Text("Plan").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
             } }.tag(0)
+           
             Lesson().tabItem { VStack{
                 Image("les")
                 Text("Lessons").font(.custom("ND Astroneer", size: 16)).foregroundColor(Color("tt"))
@@ -35,19 +37,20 @@ struct B:View {
 }
 
 struct Main: View {
+    @Binding var Swift22:Int
     @State var of:CGFloat = 0
-   
+    @State var all = UserDefaults.standard.integer(forKey: "All")
     var body: some View {
         ZStack{
             Rectangle()
                 .foregroundColor(.clear)
                 .background(LinearGradient(gradient: Gradient(colors: [Color("le"), Color("tr")]), startPoint: .leading, endPoint: .trailing))
             ZStack{
-            RoundedRectangle(cornerRadius: 49).foregroundColor(.white).frame(width: 345, height: 659, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            RoundedRectangle(cornerRadius: 49).foregroundColor(.white).frame(width: 345, height: 659, alignment: .center)
                 VStack{
                     HStack(spacing:70){
                         VStack{
-                            Text("0").foregroundColor(of == -110 ? .white : Color("tt"))
+                            Text("\(all)").foregroundColor(of == -110 ? .white : Color("tt"))
                             Text("Training").foregroundColor(of == -110 ? .white : Color("tt"))
                         }.offset(x: of == -110 ? -40 : 0, y: of == -110 ? -100 : 0)
                         VStack{
@@ -74,17 +77,17 @@ struct Main: View {
               
                     VStack(spacing:20){
                 Button(action: {
-                    
+                    Swift22 = 6
                 }, label: {
                     Image("hand")
                 })
                 Button(action: {
-                    
+                   
                 }, label: {
                     Image("sp")
                 })
                 Button(action: {
-                    
+                    Swift22 = 8
                 }, label: {
                     ZStack{
                     Image("tors")
@@ -120,6 +123,6 @@ struct Main: View {
 
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
-        Main()
+        Main(Swift22: .constant(1))
     }
 }

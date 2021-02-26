@@ -61,6 +61,25 @@ struct Swift4: View {
         }else if Swift22 == 5{
            Swift3()
         }
+        else if Swift22 == 6{
+            v( Swift22: $Swift22)
+         
+    }else if Swift22 == 7{
+        v1( Swift22: $Swift22)
+     }
+    else if Swift22 == 8{
+        p( Swift22: $Swift22)
+     }
+    else if Swift22 == 9{
+        p2( Swift22: $Swift22)
+     }
+    else if Swift22 == 10{
+        v2( Swift22: $Swift22)
+     }
+    else if Swift22 == 11{
+        p3( Swift22: $Swift22)
+     }
+    
         }
     }
     

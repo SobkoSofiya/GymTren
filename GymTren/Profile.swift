@@ -11,6 +11,7 @@ struct Profile: View {
     @State var wi = UserDefaults.standard.string(forKey: "W")
     @State var hi = UserDefaults.standard.string(forKey: "H")
     @State var na = UserDefaults.standard.string(forKey: "na")
+    @State var no = UserDefaults.standard.bool(forKey: "No")
     @State var flag = false
     @State var show = false
     @Binding var Swift22:Int
@@ -71,7 +72,10 @@ struct Profile: View {
                                     } else if i == "Notifications"{
                                         Toggle(isOn:$flag ){
                                             
-                                        }.toggleStyle(Tog()).padding(.horizontal)
+                                        }.toggleStyle(Tog()).padding(.horizontal).onChange(of: flag, perform: { value in
+                                            Toggl()
+                                            UserDefaults.standard.set(flag, forKey: "No")
+                                        })
                                     }
                                 }
                             })
@@ -119,6 +123,8 @@ struct Profile: View {
             
         }.edgesIgnoringSafeArea(.all).onAppear(perform: {
             model.Get()
+        }).onAppear(perform: {
+            flag = no
         })
     }
     func alertCust()  {
@@ -157,6 +163,29 @@ struct Profile: View {
             
         })
     }
+    func Toggl()  {
+        if flag {
+            senf()
+        } else{
+            sent()
+        }
+    }
+    func senf()  {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (_, _) in
+            
+        }
+        let content = UNMutableNotificationContent()
+        content.title = "Вниманеие!"
+        content.body = "Время заниматься!"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300, repeats: true)
+        
+        let req = UNNotificationRequest(identifier: "req", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+    }
+    func sent()  {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["req"])
+    }
 }
 
 struct Profile_Previews: PreviewProvider {
@@ -171,8 +200,8 @@ struct Tog:ToggleStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         HStack{
             configuration.label
-            ZStack(alignment:configuration.isOn ? .leading : .trailing){
-                RoundedRectangle(cornerRadius: 25.0).frame(width: 34, height: 15, alignment: .center).foregroundColor(Color("tt").opacity(0.3))
+            ZStack(alignment:configuration.isOn ? .trailing : .leading){
+                RoundedRectangle(cornerRadius: 25.0).frame(width: 34, height: 15, alignment: .center).foregroundColor(configuration.isOn ? Color("ci") : .red ).opacity(0.3)
                 Circle().frame(width: 20, height: 20, alignment: .center)
                     .foregroundColor(Color("tt")).onTapGesture(perform: {
                         withAnimation{
